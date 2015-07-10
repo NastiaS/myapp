@@ -1,7 +1,12 @@
 doctype html
-html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+html(ng-app='ngMyApp')
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/javascripts/vendors/jQuery.min.js')
+		script(src='/javascripts/vendors/angular.min.js')
+		script(src='/javascripts/app/controllers/main.js')
+	body
+		div(ng-controller='mainController')
+			h2 {{title}}
+			block content
