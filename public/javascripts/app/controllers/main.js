@@ -1,4 +1,4 @@
 angular.module('ngMyApp', [])
-	.controller('mainController', function($scope){
-		$scope.title = "lalallalala"
-	});
+	.controller('mainController', ['$scope', function($scope){
+		$scope.title = "This is the title!!"
+	}]);
