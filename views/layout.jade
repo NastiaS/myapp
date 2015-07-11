@@ -3,10 +3,20 @@ html(ng-app='ngMyApp')
 	head
 		title= title
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel="stylesheet", type="text/css", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")
 		script(src='javascripts/vendors/jQuery.min.js')
 		script(src='javascripts/vendors/angular.min.js')
 		script(src='javascripts/destination/app.min.js')
 	body
 		div(ng-controller='mainController')
 			h2 {{title}}
-			block content
+			h2= title
+			h2 Welcome to #{title}
+				div
+					button.btn.btn-default.btn-lg.btn-block(ng-click="loadPosts()" title="click to search") Find Posts
+					div#posts
+						p(ng-repeat='post in posts') 
+							span Title: {{post.title}} 
+							br
+							span Body: {{post.body}}
+		block content

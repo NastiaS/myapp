@@ -7,6 +7,27 @@ body{
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-h1,p,h2 {
+h1,h2 {
 	text-align: center;
+}
+
+#posts {
+	width: 80%;
+	background-color: transparent;
+	margin-left: 155px;
+}
+
+p {
+	font-size: 0.6em;
+	font-weight: normal;
+	text-align: left;
+	font-family: sans-serif;
+}
+
+.btn-block {
+  width: 80% !important;
+  margin-left: 155px;
+  background-color: #eee;
+  margin-top: 20px;
+  margin-bottom: 20px !important;
 }
