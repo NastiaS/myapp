@@ -1,26 +1,27 @@
 var app = angular.module('ngMyApp', []);
 
-	app.controller('mainController', ['$scope', 'PostsFactory', function($scope, PostsFactory){
+	app.controller('MainController', ['$scope', 'PostsFactory', function($scope, PostsFactory){
 		$scope.title = "This is my home page!"
 
-		$scope.loadPosts = function(){
+		$scope.showPosts = false;
 
+		$scope.loadPosts = function(){
+			$scope.showPosts = true;
 			PostsFactory.bringPosts()
 			.then(function (allPosts) {	 	
 				$scope.posts = allPosts;
 			})			
 		}
 
+		$scope.hidePosts = function(){
+			$scope.posts = null;
+			$scope.showPosts = false;
+		}
+
+
+		$scope.toggle = function () {  
+        	$scope.showPosts = !$scope.showPosts;
+    };
+
 	}])
 
-	app.factory('PostsFactory', ['$http', function($http){
-	return {
-		bringPosts: function() {
-		    return $http.get('http://jsonplaceholder.typicode.com/posts')
-		    	.then(function(posts){
-		    		return posts.data
-		    	})
-    	}
-	}
-
-}])

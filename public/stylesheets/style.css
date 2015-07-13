@@ -13,15 +13,8 @@ h1,h2 {
 
 #posts {
 	width: 80%;
-	background-color: transparent;
 	margin-left: 155px;
-}
-
-p {
-	font-size: 0.6em;
-	font-weight: normal;
-	text-align: left;
-	font-family: sans-serif;
+	border: 1px solid black;
 }
 
 .btn-block {
@@ -30,4 +23,27 @@ p {
   background-color: #eee;
   margin-top: 20px;
   margin-bottom: 20px !important;
+}
+
+th,td {
+	font-size: 0.6em;
+	font-weight: normal;
+	text-align: left;
+	font-family: sans-serif;
+	border-right: 1px solid black;
+}
+tr {
+	border-bottom: 1px solid black;
+}
+
+#rows {
+	margin: 5px;
+	padding: 5px;
+	background-color: white;
+}
+
+#rowName{
+	text-align: center;
+	font-size: 0.8em;
+	background-color: #eee;
 }
