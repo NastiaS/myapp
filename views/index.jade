@@ -4,8 +4,8 @@ block content
 	h2= title
 	h2 Welcome to #{title}
 		div
-			button.btn.btn-default.btn-lg.btn-block(ng-if="!showPosts" ng-click="loadPosts()","toggle()" title="click to search") Find Posts
-			button.btn.btn-default.btn-lg.btn-block(ng-if="showPosts" ng-click="hidePosts()","toggle()" title="click to search") Hide Posts
+			button.btn.btn-default.btn-lg.btn-block(ng-if="!showPosts" ng-click="loadPosts()" title="click to search") Find Posts
+			button.btn.btn-default.btn-lg.btn-block(ng-if="showPosts" ng-click="hidePosts()" title="click to search") Hide Posts
 
 			table#posts(ng-if="showPosts")
 				thead

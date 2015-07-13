@@ -18,10 +18,7 @@ var app = angular.module('ngMyApp', []);
 			$scope.showPosts = false;
 		}
 
-
-		$scope.toggle = function () {  
-        	$scope.showPosts = !$scope.showPosts;
-    };
+/
 
 }]);
 
