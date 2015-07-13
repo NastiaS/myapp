@@ -32,12 +32,12 @@ var app = angular.module('ngMyApp', []);
 					$scope.comments = comments;
 				})
 		}
-		$scope.hideComments = function(post.id){
+		$scope.hideComments = function(postid){
 			$scope.comments = null;
 			$scope.showComments = false;
 		}
 
-		
+
 
 }]);
 
