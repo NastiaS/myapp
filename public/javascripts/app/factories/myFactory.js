@@ -33,3 +33,13 @@ app.factory('PostsFactory', ['$http', 'APIConfig', function($http, APIConfig){
 		}
 }])
 
+app.factory('CommentsFactory', ['$http', 'APIConfig', function($http, APIConfig){
+	return {
+		bringComments: function(postId){
+			return $http.get(APIConfig.getRoot() + "posts/" + postId + "/comments")
+				.then(function(comments){
+					return comments.data;
+				})
+		}
+	}
+}])
