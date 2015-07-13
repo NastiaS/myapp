@@ -7,7 +7,7 @@ block content
 			button.btn.btn-default.btn-lg.btn-block(ng-if="!showPosts" ng-click="loadPosts()","toggle()" title="click to search") Find Posts
 			button.btn.btn-default.btn-lg.btn-block(ng-if="showPosts" ng-click="hidePosts()","toggle()" title="click to search") Hide Posts
 
-			table#posts
+			table#posts(ng-if="showPosts")
 				thead
 					tr
 						th#rowName #
@@ -15,7 +15,7 @@ block content
 						th#rowName Body
 					tbody
 						tr(ng-repeat="post in posts")
-							td#rows {{$index}}
+							td#rows {{$index + 1}}
 							td#rows {{post.title}}
 							td#rows {{post.body}}
 

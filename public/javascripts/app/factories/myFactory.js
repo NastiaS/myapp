@@ -22,7 +22,6 @@ app.factory("APIConfig", [function (){
 
 
 
-
 app.factory('PostsFactory', ['$http', 'APIConfig', function($http, APIConfig){
 	return {
 		bringPosts: function() {

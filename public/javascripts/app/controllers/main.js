@@ -23,5 +23,5 @@ var app = angular.module('ngMyApp', []);
         	$scope.showPosts = !$scope.showPosts;
     };
 
-	}])
+}]);
 

@@ -25,13 +25,7 @@ h1,h2 {
   margin-bottom: 20px !important;
 }
 
-th,td {
-	font-size: 0.6em;
-	font-weight: normal;
-	text-align: left;
-	font-family: sans-serif;
-	border-right: 1px solid black;
-}
+
 tr {
 	border-bottom: 1px solid black;
 }
@@ -40,10 +34,16 @@ tr {
 	margin: 5px;
 	padding: 5px;
 	background-color: white;
+	font-size: 0.6em;
+	font-weight: normal;
+	text-align: left;
+	font-family: sans-serif;
+	border-right: 1px solid black;
 }
 
 #rowName{
 	text-align: center;
 	font-size: 0.8em;
 	background-color: #eee;
+	border-right: 1px solid black;
 }
