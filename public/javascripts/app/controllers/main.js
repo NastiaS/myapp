@@ -32,7 +32,7 @@ var app = angular.module('ngMyApp', []);
 					$scope.comments = comments;
 				})
 		}
-		$scope.hideComments = function(postid){
+		$scope.hideComments = function(){
 			$scope.comments = null;
 			$scope.showComments = false;
 		}

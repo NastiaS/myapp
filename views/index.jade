@@ -20,7 +20,7 @@ block content
 							span.content{{post.body}} 
 					li.list-group-item 
 						button.btn.btn-default.btn-sm(ng-if="!showComments" ng-click="loadComments(post.id)") Show Comments
-						button.btn.btn-default.btn-sm(ng-if="showComments" ng-click="hideComments(post.id)") Hide Comments 
+						button.btn.btn-default.btn-sm(ng-if="showComments" ng-click="hideComments()") Hide Comments 
 					ul(ng-repeat="comment in comments")
 						div(ng-if="commentForPost(post.id,comment.postId)") 
 							li.list-group-item.list-group-item-success
