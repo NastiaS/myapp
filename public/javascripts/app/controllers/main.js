@@ -38,6 +38,5 @@ var app = angular.module('ngMyApp', []);
 		}
 
 
-
 }]);
 

@@ -8,6 +8,11 @@ html(ng-app='ngMyApp')
 		script(src='javascripts/vendors/angular.min.js')
 		script(src='javascripts/destination/app.min.js')
 	body
+		nav.navbar.navbar-inverse
+			div.container-fluid
+				div.navbar-header
+					a.navbar-brand(href="#")
+						img#logo(alt="Brand" src="http://www.hypersloth.co.uk/images/logo.png")
 		div(ng-controller='MainController')
 			h2 {{title}}
 			
