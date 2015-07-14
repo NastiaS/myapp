@@ -26,7 +26,6 @@ var app = angular.module('ngMyApp', []);
 		}
 
 		$scope.loadComments = function(postId){
-			$scope.showComments = true;
 			CommentsFactory.bringComments(postId)
 				.then(function(comments){
 					$scope.comments = comments;
@@ -34,9 +33,9 @@ var app = angular.module('ngMyApp', []);
 		}
 		$scope.hideComments = function(){
 			$scope.comments = null;
-			$scope.showComments = false;
 		}
 
-
 }]);
+
+
 
