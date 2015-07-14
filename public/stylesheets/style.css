@@ -61,10 +61,14 @@ tr {
  img{
     margin-bottom: 8px;
     margin-right: 30px;
-    width: 30px;
+    width: 25px;
     }
   
 ul {
 	padding-left: 0px !important;
 }
-  
+ 
+sloth-logo {
+	padding: 8px;
+	width: 20px;
+} 
