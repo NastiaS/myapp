@@ -1,39 +1,54 @@
 var app = angular.module('ngMyApp', []);
 
-	app.controller('MainController', ['$scope', 'PostsFactory', 'CommentsFactory', function($scope, PostsFactory, CommentsFactory){
-		$scope.title = "This is my home page!"
+	app.controller('MainController', ['$scope', 'Posts', 'Comments', function ($scope, Posts, Comments) {
 
-		$scope.showPosts = false;
-		$scope.showComments = false;
+		$scope.title = 'This is my home page!'
 
-		$scope.loadPosts = function(){
-			$scope.showPosts = true;
-			PostsFactory.bringPosts()
-			.then(function (allPosts) {	 	
-				$scope.posts = allPosts;
-			})			
-		}
+		//variables responsible for toggling posts and comments
+		$scope.show_posts = false;
+		$scope.show_comments = false;
 
-		$scope.hidePosts = function(){
+		//load all posts on the page on click
+		$scope.loadPosts = function () {
+
+			$scope.show_posts = true;
+
+			Posts.bringPosts()
+				.then(function (allPosts) {	 	
+					$scope.posts = allPosts;
+			});			
+		};
+
+		//hide all posts from the page on click
+		$scope.hidePosts = function () {
+
 			$scope.posts = null;
-			$scope.showPosts = false;
-		}
-		$scope.commentForPost = function(postId, commentId){
-			if(postId == commentId){
+			$scope.show_posts = false;
+		};
+
+
+		//load all comments related to a post on click
+		$scope.loadComments = function (postId) {
+
+			Comments.bringComments(postId)
+				.then(function (comments) {
+					$scope.comments = comments;
+				});
+		};
+
+		//display comments only related to a specific post
+		$scope.commentForPost = function (postId, commentId) {
+
+			if (postId == commentId) {
 				return true;
 			}
 			else return false;
-		}
+		};
 
-		$scope.loadComments = function(postId){
-			CommentsFactory.bringComments(postId)
-				.then(function(comments){
-					$scope.comments = comments;
-				})
-		}
-		$scope.hideComments = function(){
+		//hide all comments on click
+		$scope.hideComments = function () {
 			$scope.comments = null;
-		}
+		};
 
 }]);
 
