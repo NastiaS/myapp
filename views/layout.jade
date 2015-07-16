@@ -9,7 +9,7 @@ html(ng-app="ngMyApp")
 		script(src="javascripts/vendors/angular.min.js")
 		script(src="javascripts/destination/app.min.js")
 	body
-		nav.navbar.navbar-inverse
+		nav.navbar.navbar-inverse.navbar-fixed-top
 			div.container-fluid
 				div.navbar-header
 					a.navbar-brand(href="#")
@@ -19,4 +19,7 @@ html(ng-app="ngMyApp")
 			
 			block content
 
-
+		nav.navbar.navbar-inverse.navbar-fixed-bottom
+			div.container-fluid
+				div.navbar-header
+					p.footer This is my awesome footer fixed to the bottom!

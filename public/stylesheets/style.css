@@ -51,3 +51,10 @@ sloth-logo {
 	padding: 8px;
 	width: 20px;
 } 
+
+.footer{
+	position: relative;
+	margin-top: 20px;
+	margin-left: 650px;
+	color: white;
+}
