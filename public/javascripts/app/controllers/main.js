@@ -1,8 +1,14 @@
-var app = angular.module('ngMyApp', []);
+var app = angular.module('ngMyApp', ['ngRoute']);
+
+// app.config(['$routeProvider', function($routeProvider){
+//   $routeProvider
+//       .when('/',{
+//             templateUrl: '../../views/main.html',
+//             controller: 'MainController' 
+//       })
+// }]);
 
 	app.controller('MainController', ['$scope', 'Posts', 'Comments', function ($scope, Posts, Comments) {
-
-		$scope.title = 'This is my home page!'
 
 		//variables responsible for toggling posts and comments
 		$scope.show_posts = false;

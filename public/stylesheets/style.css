@@ -5,6 +5,7 @@ body{
 	width: 100%;
 	height: 100vh;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding-top: 90px;
 }
 
 h1,h2 {
@@ -57,4 +58,19 @@ sloth-logo {
 	margin-top: 20px;
 	margin-left: 650px;
 	color: white;
+}
+
+.bkimg {
+	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?fit=crop&fm=jpg&h=800&q=75&w=1050");
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding-top: 90px;
+}
+
+span{
+	margin: 35px 40px 0 !important;
+	font-size: 1em;
 }
