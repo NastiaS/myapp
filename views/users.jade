@@ -1,0 +1,34 @@
+h2 Welcome to the Users Page!!!
+	div
+		button.btn.btn-default.btn-lg.btn-block(ng-if="!show_users" ng-click="loadUsers()" title="click to search") Find Users
+			sloth-logo 
+		button.btn.btn-default.btn-lg.btn-block(ng-if="show_users" ng-click="hideUsers()" title="click to hide") Hide Users
+			sloth-logo 
+
+div#posts(ng-if="show_users")
+	ul.list-group(ng-repeat="user in users")
+		li.list-group-item 
+			h3 Index: 
+				span.content{{$index + 1}} 
+		li.list-group-item 
+			h3 Name: 
+				span.content{{user.name}} 
+		li.list-group-item 
+			h3 Email: 
+				span.content{{user.email}} 
+		li.list-group-item 
+			h3 Website: 
+				span.content{{user.website}} 
+		li.list-group-item 
+			button.btn.btn-default.btn-sm(ng-click="loadAlbums(user.id); show_albums=!show_albums" ng-hide="show_albums") Show Albums
+			button.btn.btn-default.btn-sm(ng-show="show_albums" ng-click="hideAlbums(); show_albums=!show_albums") Hide Albums 
+			//- button.btn.btn-default.btn-sm(ng-click="loadPosts(user.id); show_posts=!show_posts" ng-hide="show_posts") Show Posts
+			//- button.btn.btn-default.btn-sm(ng-show="show_posts" ng-click="hidePosts(); show_posts=!show_posts") Hide Posts 
+		ul(ng-repeat="album in albums")
+			div(ng-if="albumsForUser(user.id,album.userId)") 
+				li.list-group-item.list-group-item-success
+					span.content{{$index+1}}) {{album.title}}		
+		//- ul(ng-repeat="post in posts")
+		//- 	div(ng-if="postsForUser(user.id,post.userId)") 
+		//- 		li.list-group-item.list-group-item-success
+		//- 			span.content{{$index+1}}) {{post.title}}

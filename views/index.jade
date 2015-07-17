@@ -10,6 +10,8 @@ block content
 				include post.jade
 			div(ng-switch-when="about")
 				include about.jade
+			div(ng-switch-when="users")
+				include users.jade
 			div(ng-switch-default)
 				include about.jade
 

@@ -47,3 +47,29 @@ app.factory('Comments', ['$http', 'APIConfig', function ($http, APIConfig) {
 		}
 	}
 }]);
+
+
+app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
+
+	return {
+		bringUsers: function () {
+		    return $http.get(APIConfig.getRoot() + "users/")
+		    	.then(function (users) {
+		    		return users.data
+		    	})
+    		}
+		}
+}]);
+
+app.factory('Albums', ['$http', 'APIConfig', function ($http, APIConfig) {
+
+	return {
+		bringAlbums: function (userId) {
+			return $http.get(APIConfig.getRoot() + "users/" + userId + "/albums")
+				.then(function (albums) {
+					return albums.data;
+				})
+		}
+	}
+}]);
+
