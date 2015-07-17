@@ -1,4 +1,4 @@
-body{
+/*.homePage{
 	background-image: url("https://download.unsplash.com/photo-1433838552652-f9a46b332c40");
 	background-size: cover;
 	background-attachment: fixed;
@@ -6,10 +6,15 @@ body{
 	height: 100vh;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	padding-top: 90px;
-}
+}*/
 
 h1,h2 {
 	text-align: center !important;
+}
+h5 {
+	text-align: left;
+	margin: 40px 50px 0;
+	font-size: 2em;
 }
 
 h3 {
@@ -60,7 +65,13 @@ sloth-logo {
 	color: white;
 }
 
-.bkimg {
+p#aboutPage {
+	text-align: left;
+	margin: 40px 50px 0;
+	font-size: 1.4em;
+}
+
+#bkimg {
 	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?fit=crop&fm=jpg&h=800&q=75&w=1050");
 	background-size: cover;
 	background-attachment: fixed;
@@ -71,6 +82,6 @@ sloth-logo {
 }
 
 span{
-	margin: 35px 40px 0 !important;
+	margin: 40px 0 !important;
 	font-size: 1em;
 }

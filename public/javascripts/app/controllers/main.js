@@ -1,14 +1,10 @@
-var app = angular.module('ngMyApp', ['ngRoute']);
+var app = angular.module('ngMyApp', []);
 
-// app.config(['$routeProvider', function($routeProvider){
-//   $routeProvider
-//       .when('/',{
-//             templateUrl: '../../views/main.html',
-//             controller: 'MainController' 
-//       })
-// }]);
 
-	app.controller('MainController', ['$scope', 'Posts', 'Comments', function ($scope, Posts, Comments) {
+	app.controller('MainController', ['$rootScope', '$scope', 'Posts', 'Comments', function ($rootScope, $scope, Posts, Comments) {
+
+		//using rootScope makes it available everywhere in the app regardless on the controller
+		$rootScope.switch_key = 'home';
 
 		//variables responsible for toggling posts and comments
 		$scope.show_posts = false;
