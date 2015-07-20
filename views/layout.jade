@@ -2,29 +2,36 @@ doctype html
 html(ng-app="ngMyApp")
 	head
 		title= title
+		base(href='/')
 		link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
 		link(rel="stylesheet", href="/stylesheets/style.css")
 		script(src="javascripts/vendors/jQuery.min.js")
 		script(src="bootstrap/js/bootstrap.min.js")
 		script(src="/angular/angular.js")
+		script(src="/angular-route/angular-route.js")
 		script(src="javascripts/destination/app.min.js")
+			//- to change background use ng-class
 	body
 		nav.navbar.navbar-inverse.navbar-fixed-top
 			div.container-fluid
 				div.navbar-header
-					a.navbar-brand(ng-click="switch_key='home'")
-						sloth-logo
+						//- a.navbar-brand(ng-click="switch_key='home'")
+							a(href="/about")
+							sloth-logo
+						a.navbar-brand(href="/")
+							sloth-logo
 					ul.nav.navbar-nav.navbar-right
 						li 
-							a(ng-click="switch_key='posts'") posts
+							//- a(ng-click="switch_key='posts'") posts
+							a(href="/page/post") Posts
 						li 
-							a(ng-click="switch_key='about'") about
+							//- a(ng-click="switch_key='about'") about
+							a(href="/page/about") About
 						li 
-							a(ng-click="switch_key='users'") users
-	
-			
-		block content
-
+							//- a(ng-click="switch_key='users'") users
+							a(href="/page/users") Users
+		
+		div(ng-view)
 		nav.navbar.navbar-inverse.navbar-fixed-bottom
 			div.container-fluid
 				div.navbar-header

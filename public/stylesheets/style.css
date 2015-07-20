@@ -71,7 +71,7 @@ p#aboutPage {
 	font-size: 1.4em;
 }
 
-#bkimg {
+body {
 	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?fit=crop&fm=jpg&h=800&q=75&w=1050");
 	background-size: cover;
 	background-attachment: fixed;
