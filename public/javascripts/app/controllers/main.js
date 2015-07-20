@@ -1,29 +1,6 @@
-var app = angular.module('ngMyApp', ['ngRoute']);
+angular.module('ngMyApp')
+	.controller('MainController', ['$rootScope', '$scope', 'Posts', 'Comments', 'Users', 'Albums', function ($rootScope, $scope, Posts, Comments, Users, Albums) {
 
-	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-		$routeProvider.
-			when('/', {
-				templateUrl: '/page/home'
-			}).
-			when('/page/about', {
-				templateUrl: '/page/about'
-			}).
-			when('/page/post', {
-				templateUrl: '/page/post'
-			}).
-			when('/page/users', {
-				templateUrl: '/page/users'
-			}).
-			otherwise({
-				redirectTo: '/'
-			}),
-		$locationProvider.html5Mode(true)
-	}]);
-
-	app.controller('MainController', ['$rootScope', '$scope', 'Posts', 'Comments', 'Users', 'Albums', function ($rootScope, $scope, Posts, Comments, Users, Albums) {
-
-		//using rootScope makes it available everywhere in the app regardless on the controller
-		// $rootScope.switch_key = 'home';
 	
 		//variables responsible for toggling posts and comments
 		$scope.show_posts = false;

@@ -9,16 +9,16 @@ div#posts(ng-if="show_users")
 	ul.list-group(ng-repeat="user in users")
 		li.list-group-item 
 			h3 Index: 
-				span.content{{$index + 1}} 
+				span.content {{$index + 1}} 
 		li.list-group-item 
 			h3 Name: 
-				span.content{{user.name}} 
+				span.content {{user.name}} 
 		li.list-group-item 
 			h3 Email: 
-				span.content{{user.email}} 
+				span.content {{user.email}} 
 		li.list-group-item 
 			h3 Website: 
-				span.content{{user.website}} 
+				span.content {{user.website}} 
 		li.list-group-item 
 			button.btn.btn-default.btn-sm(ng-click="loadAlbums(user.id); show_albums=!show_albums" ng-hide="show_albums") Show Albums
 			button.btn.btn-default.btn-sm(ng-show="show_albums" ng-click="hideAlbums(); show_albums=!show_albums") Hide Albums 
@@ -27,7 +27,7 @@ div#posts(ng-if="show_users")
 		ul(ng-repeat="album in albums")
 			div(ng-if="albumsForUser(user.id,album.userId)") 
 				li.list-group-item.list-group-item-success
-					span.content{{$index+1}}) {{album.title}}		
+					span.content {{$index+1}}) {{album.title}}		
 		//- ul(ng-repeat="post in posts")
 		//- 	div(ng-if="postsForUser(user.id,post.userId)") 
 		//- 		li.list-group-item.list-group-item-success
