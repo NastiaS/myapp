@@ -8,8 +8,8 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 			when('/page/about', {
 				templateUrl: '/page/about'
 			}).
-			when('/page/post', {
-				templateUrl: '/page/post'
+			when('/page/posts', {
+				templateUrl: '/page/posts'
 			}).
 			when('/page/users', {
 				templateUrl: '/page/users'

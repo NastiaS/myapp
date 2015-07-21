@@ -1,13 +1,3 @@
-/*.homePage{
-	background-image: url("https://download.unsplash.com/photo-1433838552652-f9a46b332c40");
-	background-size: cover;
-	background-attachment: fixed;
-	width: 100%;
-	height: 100vh;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	padding-top: 90px;
-}*/
-
 h1,h2 {
 	text-align: center !important;
 }
@@ -71,14 +61,30 @@ p#aboutPage {
 	font-size: 1.4em;
 }
 
+.postsPage {
+	color: white;
+}
+
 body {
-	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?fit=crop&fm=jpg&h=800&q=75&w=1050");
+	background-image: url("https://download.unsplash.com/photo-1414073875831-b47709631146");
 	background-size: cover;
 	background-attachment: fixed;
 	width: 100%;
 	height: 100vh;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 	padding-top: 90px;
+}
+
+.about-layout {
+	background-image: url("https://download.unsplash.com/44/E5KMvPp9SsCnqmEGUwAS_2014-08-10%2012.56.40%201.jpg");
+}
+
+.posts-layout {
+	background-image: url("https://download.unsplash.com/42/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg");
+}
+
+.users-layout {
+	background-image: url("https://ununsplash.imgix.net/photo-1433650552684-d4004a945d6c?fit=crop&fm=jpg&h=700&q=75&w=1050");
 }
 
 span{

@@ -1,9 +1,9 @@
-h2 Welcome to #{title}
-div(ng-controller="MainController")
+h2.postsPage Welcome to the Posts Page!
+div(ng-controller="PostsController")
 	div
-		button.btn.btn-default.btn-lg.btn-block(ng-if="!show_posts" ng-click="loadPosts()" title="click to search") Find Posts
+		button.btn.btn-default.btn-lg.btn-block.posts-button(ng-if="!show_posts" ng-click="loadPosts()" title="click to search") Find Posts
 			sloth-logo 
-		button.btn.btn-default.btn-lg.btn-block(ng-if="show_posts" ng-click="hidePosts()" title="click to hide") Hide Posts
+		button.btn.btn-default.btn-lg.btn-block.posts-button(ng-if="show_posts" ng-click="hidePosts()" title="click to hide") Hide Posts
 			sloth-logo 
 
 	div#posts(ng-if="show_posts")

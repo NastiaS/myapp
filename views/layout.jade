@@ -4,13 +4,14 @@ html(ng-app="ngMyApp")
 		title= title
 		base(href='/')
 		link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
+		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 		link(rel="stylesheet", href="/stylesheets/style.css")
 		script(src="javascripts/vendors/jQuery.min.js")
 		script(src="bootstrap/js/bootstrap.min.js")
 		script(src="/angular/angular.js")
 		script(src="/angular-route/angular-route.js")
 		script(src="javascripts/destination/app.min.js")
-	body
+	body(class="{{bodylayout}}")
 		nav.navbar.navbar-inverse.navbar-fixed-top
 			div.container-fluid
 				div.navbar-header
@@ -18,12 +19,12 @@ html(ng-app="ngMyApp")
 						sloth-logo
 					ul.nav.navbar-nav.navbar-right
 						li 
-							a(href="/page/post") Posts
-						li 
-							a(href="/page/about") About
+							a(href="/page/posts") Posts
 						li 
 							a(href="/page/users") Users
-		
+						li 
+							a(href="/page/about") About
+						
 		div(ng-view)
 		nav.navbar.navbar-inverse.navbar-fixed-bottom
 			div.container-fluid
