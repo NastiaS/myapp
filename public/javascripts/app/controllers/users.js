@@ -2,6 +2,7 @@ angular.module('ngMyApp')
 
 	.controller('UsersController', ['$scope', '$rootScope', 'Users', 'Albums', function ($scope, $rootScope,Users, Albums) {
 		
+		//change the glodab variable that changes the class of the body for the bk_image
 		$rootScope.bodylayout = 'users-layout';
 		$scope.show_users = false;
 

@@ -18,6 +18,10 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 				templateUrl: '/page/users',
 				controller: 'UsersController'
 			}).
+			when('/page/login', {
+				templateUrl: '/page/login',
+				controller: 'LoginController'
+			}).
 			otherwise({
 				redirectTo: '/'
 			}),
