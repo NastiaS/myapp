@@ -7,13 +7,12 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var _ = require('lodash');
-// var fakeDB = require('/fakeDB');
 var session = require('express-session');
 var flash = require('connect-flash');
 
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
 
 var app = express();
 
@@ -31,31 +30,21 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../bower_components')));
 
 //middleware for passport
-app.use(session({ secret: 'itisfreezinghere' })); // session secret
+require('./config/passport')(passport)
+app.use(session({secret: 'isAsecret', 
+                 saveUninitialized: true,
+                 resave: true})); // session secret // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
+// app.use('/', routes);
+// app.use('/users', users);
 
 
+require('./routes/index.js')(app, passport);
 
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    fakeDB._find({ username: username }, function (err, user) {
-      if (err) { return done(err); }
-      if (!user) {
-        return done(null, false, { message: 'Incorrect username.' });
-      }
-      if (!user.validPassword(password)) {
-        return done(null, false, { message: 'Incorrect password.' });
-      }
-      return done(null, user);
-    });
-  }
-));
 
-app.use('/', routes);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

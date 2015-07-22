@@ -6,19 +6,19 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 				templateUrl: '/page/home',
 				controller: 'HomeController'
 			}).
-			when('/page/about', {
+			when('/about', {
 				templateUrl: '/page/about',
 				controller: 'AboutController'
 			}).
-			when('/page/posts', {
+			when('/posts', {
 				templateUrl: '/page/posts',
 				controller: 'PostsController'
 			}).
-			when('/page/users', {
+			when('/users', {
 				templateUrl: '/page/users',
 				controller: 'UsersController'
 			}).
-			when('/page/login', {
+			when('/login', {
 				templateUrl: '/page/login',
 				controller: 'LoginController'
 			}).

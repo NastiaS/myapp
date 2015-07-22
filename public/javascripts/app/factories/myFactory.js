@@ -73,3 +73,12 @@ app.factory('Albums', ['$http', 'APIConfig', function ($http, APIConfig) {
 	}
 }]);
 
+app.factory('AuthService', ['$http', 'APIConfig', function ($http, APIConfig) {
+
+	return {
+		loginUser: function (user) {
+			console.log("USER", user)
+			return $http.post('/login', user)	
+		}
+	}
+}]);

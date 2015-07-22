@@ -87,6 +87,10 @@ body {
 	background-image: url("https://ununsplash.imgix.net/photo-1433650552684-d4004a945d6c?fit=crop&fm=jpg&h=700&q=75&w=1050");
 }
 
+.login-layout {
+	background-image: url("https://unsplash.imgix.net/photo-1434145175661-472d90344c15?fit=crop&fm=jpg&h=800&q=75&w=1050");
+}
+
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
