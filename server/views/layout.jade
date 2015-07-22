@@ -25,7 +25,9 @@ html(ng-app="ngMyApp")
 						li 
 							a(href="/about") About
 						li 
-							a(href="/login") Login
+							a(ng-hide="currentUser" href="/login") Login
+						li 
+							a(ng-show="currentUser" href="/logout" target="_self") LogOut
 						
 		div(ng-view)
 		nav.navbar.navbar-inverse.navbar-fixed-bottom

@@ -1,16 +1,11 @@
 module.exports = [
 
-	{ username: 'Nastia',
+	{ displayName: 'Nastia',
 	password: 'nastia'},
-	{ username: 'Emmie',
+	{ displayName: 'Emmie',
 	password: 'emmie'},
-	{username: 'Carlos',
+	{ displayName: 'Carlos',
 	password: 'carlos'},
-	{username: 'Albert',
+	{ displayName: 'Albert',
 	password: 'albert'}
 ]
-
-
-// var users = {username: 'Nastia', password: 'nastia'};
-
-// module.exports = users;

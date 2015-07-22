@@ -60,8 +60,7 @@ app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
     		},
     	bringAuthUser: function(){
     		return $http.get('/getUser')
-    			.then(function(user){
-    				console.log("USER", user)
+    			.then(function (user) {
     				return user.data
     			})
     		}
@@ -76,16 +75,6 @@ app.factory('Albums', ['$http', 'APIConfig', function ($http, APIConfig) {
 				.then(function (albums) {
 					return albums.data;
 				})
-		}
-	}
-}]);
-
-app.factory('AuthService', ['$http', 'APIConfig', function ($http, APIConfig) {
-
-	return {
-		loginUser: function (user) {
-			console.log("USER", user)
-			return $http.post('/login', user)	
 		}
 	}
 }]);

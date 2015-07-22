@@ -5,8 +5,7 @@ var User = require('../fakeDB.js');
 var Google = require('./auth.js');
 
 module.exports = function(passport) {
-
-    
+  
     passport.serializeUser(function(user, done) {
       done(null, user);
     });
@@ -14,8 +13,7 @@ module.exports = function(passport) {
     passport.deserializeUser(function(user, done) {
       done(null, user);
     });
-
-    
+ 
     passport.use('local-login', new LocalStrategy({
         usernameField : 'username',
         passwordField : 'password',
@@ -28,7 +26,7 @@ module.exports = function(passport) {
             console.log('LOCAL-LOGIN PASSPORT ENTERED', username, ":", password);
           
             for(i = 0; i < User.length; i++) {
-                if(User[i].username === username && User[i].password === password) {
+                if(User[i].displayName === username && User[i].password === password) {
                     console.log('permission granted');
                 return done(null, User[i]);
                 } 

@@ -88,7 +88,7 @@ body {
 }
 
 .login-layout {
-	background-image: url("https://unsplash.imgix.net/photo-1429305336325-b84ace7eba3b?fit=crop&fm=jpg&h=700&q=75&w=1050");
+	background-image: url("https://unsplash.imgix.net/photo-1432691301971-c8b920198bd7?fit=crop&fm=jpg&h=575&q=75&w=1050");
 }
 
 span{
@@ -99,5 +99,9 @@ span{
 .logIn {
 	width: 80%;
 	margin-left: 155px;
-	color: white;
+}
+
+button.btn.btn-default.btn-lg.logOut {
+	margin-left: 250px;
+    margin-top: -65px;
 }

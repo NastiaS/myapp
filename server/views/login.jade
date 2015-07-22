@@ -1,5 +1,5 @@
 h2
-		span.fa.fa-sign-in Login page
+		span Login page
 
 div(ng-controller="LoginController")
 		form.logIn(action="/login", method="post", novalidate) 
@@ -10,18 +10,5 @@ div(ng-controller="LoginController")
 						label Password
 						input.form-control(type="password", name="password", required)
 				button.btn.btn-default.btn-lg(type="submit") Log in
-a(href="/auth/google/" target="_self")
-	button Google LogIn
-
-
-
-
-//- div(ng-controller="LoginController")
-//-     form(method='post' ng-submit="login(user)")
-//-         div.form-group
-//-           label Username
-//-           input.form-control(type='text', name='username' ng-model = "user.username")
-//-         div.form-group
-//-           label Password
-//-           input.form-control(type='password', name='password' ng-model = "user.password")
-//-         button.btn.btn-warning.btn-lg(type='submit') Login
+		a(href="/auth/google/" target="_self")
+			button.btn.btn-default.btn-lg.logOut Google
