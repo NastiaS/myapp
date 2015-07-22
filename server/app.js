@@ -9,6 +9,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var _ = require('lodash');
 var session = require('express-session');
 var flash = require('connect-flash');
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 
 // var routes = require('./routes/index');
@@ -33,10 +34,10 @@ app.use(express.static(path.join(__dirname, '../bower_components')));
 require('./config/passport')(passport)
 app.use(session({secret: 'isAsecret', 
                  saveUninitialized: true,
-                 resave: true})); // session secret // session secret
+                 resave: true})); 
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.session()); 
+app.use(flash()); 
 
 // app.use('/', routes);
 // app.use('/users', users);

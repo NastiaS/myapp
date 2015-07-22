@@ -88,10 +88,16 @@ body {
 }
 
 .login-layout {
-	background-image: url("https://unsplash.imgix.net/photo-1434145175661-472d90344c15?fit=crop&fm=jpg&h=800&q=75&w=1050");
+	background-image: url("https://unsplash.imgix.net/photo-1429305336325-b84ace7eba3b?fit=crop&fm=jpg&h=700&q=75&w=1050");
 }
 
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
+}
+
+.logIn {
+	width: 80%;
+	margin-left: 155px;
+	color: white;
 }

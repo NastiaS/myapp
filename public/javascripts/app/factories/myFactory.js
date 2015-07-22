@@ -57,6 +57,13 @@ app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
 		    	.then(function (users) {
 		    		return users.data
 		    	})
+    		},
+    	bringAuthUser: function(){
+    		return $http.get('/getUser')
+    			.then(function(user){
+    				console.log("USER", user)
+    				return user.data
+    			})
     		}
 		}
 }]);

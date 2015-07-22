@@ -4,7 +4,17 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 		$routeProvider.
 			when('/', {
 				templateUrl: '/page/home',
-				controller: 'HomeController'
+				controller: 'HomeController',
+				// resolve: {
+				// 	user: ['Users', function(Users){
+				// 		return Users.bringAuthUser()
+				// 			.then(function(user){
+				// 				console.log("RESOLVE", user)
+				// 				return user
+				// 			})
+				// 	}]
+				// }
+
 			}).
 			when('/about', {
 				templateUrl: '/page/about',
