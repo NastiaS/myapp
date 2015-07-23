@@ -1,5 +1,5 @@
 h2
-		span Login page
+	span Login page
 
 div(ng-controller="LoginController")
 		form.logIn(action="/login", method="post", novalidate) 
@@ -11,4 +11,6 @@ div(ng-controller="LoginController")
 						input.form-control(type="password", name="password", required)
 				button.btn.btn-default.btn-lg(type="submit") Log in
 		a(href="/auth/google/" target="_self")
-			button.btn.btn-default.btn-lg.logOut Google
+			button.btn.btn-default.btn-lg.logGoogle Google
+		a(href="/auth/facebook/" target="_self")
+			button.btn.btn-default.btn-lg.logFacebook Facebook
