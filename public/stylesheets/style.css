@@ -99,6 +99,7 @@ span{
 .logIn {
 	width: 80%;
 	margin-left: 155px;
+	color: black;
 }
 
 button.btn.btn-default.btn-lg.logOut {
