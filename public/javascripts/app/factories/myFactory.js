@@ -63,8 +63,16 @@ app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
     			.then(function (user) {
     				return user.data
     			})
-    		}
+		},
+
+		createUser: function (user) {
+			return $http.post('/verify', user)
+				.then(function(newUser){
+					console.log("NEWUSER", newUser)
+					return newUser.data
+				})
 		}
+	}
 }]);
 
 app.factory('Albums', ['$http', 'APIConfig', function ($http, APIConfig) {

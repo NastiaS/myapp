@@ -5,11 +5,15 @@ html(ng-app="ngMyApp")
 		base(href='/')
 		link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
 		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+		link(rel="stylesheet" type="text/css" href="/dist/semantic.min.css")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css")
 		link(rel="stylesheet", href="/stylesheets/style.css")
 		script(src="javascripts/vendors/jQuery.min.js")
-		script(src="bootstrap/js/bootstrap.min.js")
+		script(src="bootstrap/js/bootstrap.min.js")		
+		script(src="/dist/semantic.min.js")
 		script(src="/angular/angular.js")
 		script(src="/angular-route/angular-route.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js")
 		script(src="javascripts/destination/app.min.js")
 	body(class="{{bodylayout}}")
 		nav.navbar.navbar-inverse.navbar-fixed-top
@@ -28,6 +32,8 @@ html(ng-app="ngMyApp")
 							a(ng-hide="currentUser" href="/login") Login
 						li 
 							a(ng-show="currentUser" href="/logout" target="_self") LogOut
+						li 
+							a(href="/signup") Sign Up
 						
 		div(ng-view)
 		nav.navbar.navbar-inverse.navbar-fixed-bottom

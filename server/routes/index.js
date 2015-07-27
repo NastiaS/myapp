@@ -7,22 +7,46 @@ module.exports = function(app, passport) {
   /*******************************
   Rendering pages
   ********************************/
+
+ 
+
+
 	app.get('/page/:id', function (req, res) {
 		  if (req.user) {
         	res.render(req.params.id);
       }
+      else if(req.params.id == 'signup'){
+        res.render('signup')
+      }
 		  else {
         	res.render('login');
       }
+
+        res.render(req.params.id);
   });
 
-
+ 
+  app.get('/page/signup/:id', function (req, res) {
+    console.log("IN SIGNUP")
+    res.render(req.params.id)
+  })
+  
 	 /*******************************
   Get user to the client side
   ********************************/
  	app.get('/getUser', function (req,res) {
  	    res.json(req.user)
  	});
+
+
+
+   /*******************************
+Something new
+  ********************************/
+  app.post('/verify', function(req, res){
+    console.log("REQBODY", req.body)
+    res.send(req.body)
+  })
 
 
  	/*******************************

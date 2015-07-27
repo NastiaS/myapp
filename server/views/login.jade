@@ -11,6 +11,23 @@ div(ng-controller="LoginController")
 						input.form-control(type="password", name="password", required)
 				button.btn.btn-default.btn-lg(type="submit") Log in
 		a(href="/auth/google/" target="_self")
-			button.btn.btn-default.btn-lg.logGoogle Google
+			div 
+				.ui.animated.button.logGoogle(tabindex='0')
+					.visible.content Google
+					.hidden.content
+						i.right.arrow.icon
+
 		a(href="/auth/facebook/" target="_self")
-			button.btn.btn-default.btn-lg.logFacebook Facebook
+			div 
+				.ui.animated.button.logFacebook(tabindex='0')
+					.visible.content Facebook
+					.hidden.content
+						i.right.arrow.icon
+
+
+
+	//- div 
+	//- 				.ui.animated.button.logLocal(type="submit", tabindex='0')
+	//- 					.visible.content Log In
+	//- 					.hidden.content
+	//- 						i.right.arrow.icon

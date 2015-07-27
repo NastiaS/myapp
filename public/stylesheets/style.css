@@ -91,6 +91,9 @@ body {
 	background-image: url("https://unsplash.imgix.net/photo-1432691301971-c8b920198bd7?fit=crop&fm=jpg&h=575&q=75&w=1050");
 }
 
+.opinion-layout {
+	background-image: url("https://unsplash.imgix.net/photo-1428550670225-15f007f6f1ba?fit=crop&fm=jpg&h=700&q=75&w=1050");
+}
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
@@ -101,15 +104,42 @@ span{
 	margin-left: 155px;
 	color: black;
 }
-
-button.btn.btn-default.btn-lg.logGoogle {
-	margin-left: 250px;
-    margin-top: -65px;
-    background-color: #f48fb1;
+.logGoogle {
+	margin-left: 255px !important;
+    margin-top: -60px !important;
+    background-color: #c62828 !important;
+    font-size: 1.2em !important;
+    color: white !important;
 }
 
-button.btn.btn-default.btn-lg.logFacebook {
-	margin-left: 10px;
-    margin-top: -65px;
-    background-color: #90caf9;
+.logFacebook {
+	margin-left: 366px !important;
+    margin-top: -93px !important;
+    background-color: #0d47a1 !important;
+    font-size: 1.2em !important;
+    color: white !important;
+}
+
+.logLocal {
+	font-size: 1.2em !important;
+
+}
+
+.enterInfo {
+	width: 100%;
+	margin-left: 355px;
+	margin-top: 100px;
+}
+
+label {
+	margin: 50px 0;
+}
+
+label.active {
+	font-size: 1.4em !important;
+	margin: 90px 0 !important;
+}
+
+.waves-effect.waves-light.btn {
+	float: right;
 }

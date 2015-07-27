@@ -4,17 +4,7 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 		$routeProvider.
 			when('/', {
 				templateUrl: '/page/home',
-				controller: 'HomeController',
-				// resolve: {
-				// 	user: ['Users', function(Users){
-				// 		return Users.bringAuthUser()
-				// 			.then(function(user){
-				// 				console.log("RESOLVE", user)
-				// 				return user
-				// 			})
-				// 	}]
-				// }
-
+				controller: 'HomeController'
 			}).
 			when('/about', {
 				templateUrl: '/page/about',
@@ -31,6 +21,14 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 			when('/login', {
 				templateUrl: '/page/login',
 				controller: 'LoginController'
+			}).
+			when('/signup', {
+				templateUrl: '/page/signup',
+				controller: 'SignupController'
+			}).
+			when('/step2', {
+				templateUrl: '/page/signup/step2',
+				controller: 'Step2Controller'
 			}).
 			otherwise({
 				redirectTo: '/'
