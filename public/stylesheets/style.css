@@ -91,8 +91,8 @@ body {
 	background-image: url("https://unsplash.imgix.net/photo-1432691301971-c8b920198bd7?fit=crop&fm=jpg&h=575&q=75&w=1050");
 }
 
-.opinion-layout {
-	background-image: url("https://unsplash.imgix.net/photo-1428550670225-15f007f6f1ba?fit=crop&fm=jpg&h=700&q=75&w=1050");
+.signup-layout {
+	background-image: url("https://download.unsplash.com/photo-1429032021766-c6a53949594f");
 }
 span{
 	margin: 40px 0 !important;
@@ -128,7 +128,12 @@ span{
 .enterInfo {
 	width: 100%;
 	margin-left: 355px;
-	margin-top: 100px;
+	margin-top: 150px;
+}
+
+.row .col.s12 {
+    width: 100%;
+    margin-left: 80px;
 }
 
 label {

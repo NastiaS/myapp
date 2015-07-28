@@ -1,5 +1,12 @@
 
  /*******************************
+  Dependencies
+  ********************************/
+var fs = require('fs');
+var path = __dirname + '/file.jsON'
+
+
+ /*******************************
   Export function
   ********************************/
 module.exports = function(app, passport) {
@@ -9,7 +16,10 @@ module.exports = function(app, passport) {
   ********************************/
 
  
-
+  app.get('/page/signup/:id', function (req, res) {
+    console.log("IN SIGNUP")
+    res.render(req.params.id)
+  })
 
 	app.get('/page/:id', function (req, res) {
 		  if (req.user) {
@@ -26,11 +36,8 @@ module.exports = function(app, passport) {
   });
 
  
-  app.get('/page/signup/:id', function (req, res) {
-    console.log("IN SIGNUP")
-    res.render(req.params.id)
-  })
-  
+
+
 	 /*******************************
   Get user to the client side
   ********************************/
@@ -41,13 +48,24 @@ module.exports = function(app, passport) {
 
 
    /*******************************
-Something new
+  Validation and user creation
   ********************************/
-  app.post('/verify', function(req, res){
-    console.log("REQBODY", req.body)
-    res.send(req.body)
-  })
+  app.post('/verify', function (req, res) {
 
+    if (req.body.age && req.body.age < 5) {
+        res.send("Error")
+      }
+
+    else if (req.body.age) {
+      fs.writeFile(path, req.body.firstName, function (err) {
+        if (err) throw err;
+        res.send(req.body)
+      }); 
+    }
+      
+    else res.send(req.body)
+
+  });
 
  	/*******************************
   Local Auth

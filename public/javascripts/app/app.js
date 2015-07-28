@@ -30,6 +30,10 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 				templateUrl: '/page/signup/step2',
 				controller: 'Step2Controller'
 			}).
+			when('/step3', {
+				templateUrl: '/page/signup/step3',
+				controller: 'Step3Controller'
+			}).
 			otherwise({
 				redirectTo: '/'
 			}),

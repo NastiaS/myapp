@@ -1,0 +1,9 @@
+div(ng-controller="Step3Controller")
+	h2 Heyyyooo! You are on step 3!!!!!!!!
+.row.enterInfo
+	form.col.s12(name="anyName")
+		.row
+			.input-field.col.s6
+				input#age.validate(placeholder='Your Age', type='text', required, ng-model="objectToSend.age")
+				label(for='email') Age
+				button.btn.waves-effect.waves-light(type="submit", name="action", ng-disabled="anyName.$invalid", ng-click="submit(objectToSend)") Submit
