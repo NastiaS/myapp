@@ -24,6 +24,15 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 			}).
 			when('/signup', {
 				templateUrl: '/page/signup',
+				resolve: {
+					ustates: ['States', function(States){
+				 		return States.getStates()
+				 			.then(function(states){
+				 				console.log("RESOLVE", states)
+				 				return states
+				 			})
+				 	}]
+				 },
 				controller: 'SignupController'
 			}).
 			when('/step2', {
@@ -33,6 +42,14 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 			when('/step3', {
 				templateUrl: '/page/signup/step3',
 				controller: 'Step3Controller'
+			}).
+			when('/step4', {
+				templateUrl: '/page/signup/step4',
+				controller: 'Step4Controller'
+			}).
+			when('/notAllowed', {
+				templateUrl: '/page/signup/notAllowed',
+				controller: 'NotAllowedController'
 			}).
 			otherwise({
 				redirectTo: '/'

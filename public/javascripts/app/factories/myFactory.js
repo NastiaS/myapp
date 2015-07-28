@@ -68,7 +68,6 @@ app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
 		createUser: function (user) {
 			return $http.post('/verify', user)
 				.then(function(newUser){
-					console.log("NEWUSER", newUser)
 					return newUser.data
 				})
 		}
@@ -83,6 +82,79 @@ app.factory('Albums', ['$http', 'APIConfig', function ($http, APIConfig) {
 				.then(function (albums) {
 					return albums.data;
 				})
+		}
+	}
+}]);
+
+app.factory('States', ['$http', function($http){
+
+	return {
+		getStates: function (state) {
+			return $http.get('/states/')
+				.then(function (states) {
+					console.log("states", states)
+					return states.data;				})
+		}
+	}
+		// var states = ['AL - Alabama',
+  //       'AK - Alaska',
+  //       'AZ - Arizona',
+  //       'AR - Arkansas',
+  //       'CA - California',
+  //       'CO - Colorado',
+  //       'CT - Connecticut',
+  //       'DE - Delaware',
+  //       'FL - Florida',
+  //       'GA - Georgia',
+  //       'HI - Hawaii',
+  //       'ID - Idaho',
+  //       'IL - Illinois',
+  //       'IN - Indiana',
+  //       'IA - Iowa',
+  //       'KS - Kansas',
+  //       'KY - Kentucky',
+  //       'LA - Louisiana',
+  //       'ME - Maine',
+  //       'MD - Maryland',
+  //       'MA - Massachusetts',
+  //       'MI - Michigan',
+  //       'MS - Mississippi',
+  //       'MO - Missouri',
+  //       'MT - Montana',
+  //       'NE - Nebraska',
+  //       'NV - Nevada',
+  //       'NH - New Hampshire',
+  //       'NJ - New Jersey',
+  //       'NM - New Mexico',
+  //       'NY',
+  //       'NC - North Carolina',
+  //       'ND - North Dakota',
+  //       'OH - Ohio',
+  //       'OK - Oklahoma',
+  //       'PA - Pennsylvania',
+  //       'RI - Rhode Island',
+  //       'SC - South Carolina',
+  //       'SD - South Dakota',
+  //       'TN - Tennessee',
+  //       'TX - Texas',
+  //       'UT - Utah',
+  //       'VT - Vermont',
+  //       'VA - Virginia',
+  //       'WA - Washington',
+  //       'WV - West Virginia',
+  //       'WI - Wisconsin',
+  //       'WY - Wyoming'];
+	 // return states;
+}]);
+
+app.factory('Cities', ['$http', function ($http) {
+
+	return {
+		getCities: function (state) {
+			console.log("STATE", state)
+			return $http.get('/cities/' + state)
+				.then(function (cities) {
+					return cities.data;				})
 		}
 	}
 }]);

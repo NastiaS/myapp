@@ -1,24 +1,37 @@
 angular.module('ngMyApp')
 
-	.controller('Step3Controller', ['$scope','$rootScope', 'Users', '$location', function ($scope, $rootScope, Users, $location) {
+	.controller('Step3Controller', ['$scope','$rootScope', 'Users', '$location', 'Cities', 'States', function ($scope, $rootScope, Users, $location, Cities, States) {
 
 		$rootScope.bodylayout = 'signup-layout';
 	
-		
-	$scope.submit = function (newUser) { 
+		$scope.showForm = false;
 
-			// console.log('NEWWWWWWWWWWWWW', newUser)
+		States.getStates()
+			.then(function(states){
+				$scope.states = states;
+			})
+
+		$scope.showNextPage = function () {
+
 			Users.createUser($rootScope.objectToSend)
-
-				.then(function (data) {
-
-					if(data == "Error"){
-						$location.url("/signup");
-					}
-					else {
-						$location.url("/login");
-					}
+				.then(function(data){
+					Cities.getCities(data.state)
+					.then(function(result){
+						$scope.cities = result;
+					})
 				})
-	}
+			$scope.showForm = true;
+		}
+
+
+		
+		$scope.verify = function () {
+
+			Users.createUser($rootScope.objectToSend)
+				.then(function(data){
+					$location.url("/step4");
+				})
+		}
 	
 }]);
+

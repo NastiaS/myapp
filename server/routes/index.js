@@ -4,6 +4,7 @@
   ********************************/
 var fs = require('fs');
 var path = __dirname + '/file.jsON'
+var path2 = __dirname + '/cities.json';
 
 
  /*******************************
@@ -32,7 +33,7 @@ module.exports = function(app, passport) {
         	res.render('login');
       }
 
-        res.render(req.params.id);
+        // res.render(req.params.id);
   });
 
  
@@ -45,7 +46,25 @@ module.exports = function(app, passport) {
  	    res.json(req.user)
  	});
 
+  app.get('/cities/:st', function (req, res){
+    console.log("REQPARAMS", req.params.st)
+    fs.readFile(path2, function(err, data){
+      if(err) throw err;
+      var cities = JSON.parse(data);
+      console.log("CITIES", cities)
+      res.send(cities[req.params.st].cities)
+    })
+  });
 
+  app.get('/states/', function(req, res){
+    console.log("IN STATES")
+    fs.readFile(path2, function(err, data){
+      if(err) throw err;
+      var states = JSON.parse(data);
+      console.log("CITIES", states)
+      res.send(states)
+    })
+  })
 
    /*******************************
   Validation and user creation

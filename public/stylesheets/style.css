@@ -50,8 +50,8 @@ sloth-logo {
 
 .footer{
 	position: relative;
-	margin-top: 20px;
-	margin-left: 650px;
+	margin-top: 20px !important;
+	margin-left: 475px;
 	color: white;
 }
 
@@ -94,27 +94,30 @@ body {
 .signup-layout {
 	background-image: url("https://download.unsplash.com/photo-1429032021766-c6a53949594f");
 }
+.notAllowed-layout {
+	background-image: url("https://ununsplash.imgix.net/photo-1430126833726-4a091c572f3c?dpr=2&fit=crop&fm=jpg&h=750&q=75&w=1050");
+}
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
 }
 
 .logIn {
-	width: 80%;
-	margin-left: 155px;
-	color: black;
+	width: 75%;
+	margin-left: 255px;
+	margin-top: 0;
 }
 .logGoogle {
-	margin-left: 255px !important;
-    margin-top: -60px !important;
+	margin-left:10px !important;
+    margin-top: -25px !important;
     background-color: #c62828 !important;
     font-size: 1.2em !important;
     color: white !important;
 }
 
 .logFacebook {
-	margin-left: 366px !important;
-    margin-top: -93px !important;
+	margin-left: 120px !important;
+    margin-top: -65px !important;
     background-color: #0d47a1 !important;
     font-size: 1.2em !important;
     color: white !important;
@@ -126,25 +129,51 @@ span{
 }
 
 .enterInfo {
-	width: 100%;
+	width: 50%;
 	margin-left: 355px;
-	margin-top: 150px;
+	margin-top: 100px;
 }
 
 .row .col.s12 {
-    width: 100%;
-    margin-left: 80px;
+    width: 95%;
+    margin-left: 20px;
+}
+.row .col.s6 {
+    width: 80%;
+    margin-left: 0;
 }
 
 label {
-	margin: 50px 0;
+	margin: 50px;
 }
 
 label.active {
 	font-size: 1.4em !important;
-	margin: 90px 0 !important;
+	margin: 0 !important;
 }
 
 .waves-effect.waves-light.btn {
 	float: right;
+}
+
+.data-error {
+	padding: 0;
+}
+/*
+select {
+	width: 33%;
+}*/
+
+.waves-effect.waves-light.btn.states {
+	float: right;
+	margin: 5px;
+}
+
+.step1Part {
+	width: 33% !important;
+}
+
+.sorryNotAllowed {
+	text-align: right;
+	margin: 5px;
 }

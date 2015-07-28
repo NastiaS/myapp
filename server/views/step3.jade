@@ -3,7 +3,18 @@ div(ng-controller="Step3Controller")
 .row.enterInfo
 	form.col.s12(name="anyName")
 		.row
-			.input-field.col.s6
-				input#age.validate(placeholder='Your Age', type='text', required, ng-model="objectToSend.age")
-				label(for='email') Age
-				button.btn.waves-effect.waves-light(type="submit", name="action", ng-disabled="anyName.$invalid", ng-click="submit(objectToSend)") Submit
+			.input-field.col.s12
+				p Pick your state!
+					i.fa.fa-home.fa-lg
+				select.browser-default(ng-model="objectToSend.state")
+					option(value='', disabled, selected) Choose your State
+					option(ng-selected="objectToSend.state == state" ng-repeat="state in states", value = '{{state.code}}') {{state.code}} - {{state.label}}
+				button.btn.waves-effect.waves-light.states(type="submit", name="action", ng-disabled="anyName.$invalid", ng-click="showNextPage()") Next
+
+		.row(ng-if="showForm")
+			.input-field.col.s12
+				select.browser-default(ng-model="objectToSend.city")
+					option(value='', disabled, selected) Choose your City
+					option(ng-selected="objectToSend.city == city" ng-repeat="city in cities", value = '{{city}}') {{city}}
+				label City
+				button.btn.waves-effect.waves-light.states(type="submit", name="action", ng-disabled="anyName.$invalid", ng-click="verify(objectToSend)") Next
