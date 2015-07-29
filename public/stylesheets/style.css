@@ -97,6 +97,10 @@ body {
 .notAllowed-layout {
 	background-image: url("https://ununsplash.imgix.net/photo-1430126833726-4a091c572f3c?dpr=2&fit=crop&fm=jpg&h=750&q=75&w=1050");
 }
+
+.success-layout {
+	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?dpr=2&fit=crop&fm=jpg&h=800&q=75&w=1050");
+}
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
@@ -108,16 +112,16 @@ span{
 	margin-top: 0;
 }
 .logGoogle {
-	margin-left:10px !important;
-    margin-top: -25px !important;
+	margin-left:220px !important;
+    margin-top: -100px !important;
     background-color: #c62828 !important;
     font-size: 1.2em !important;
     color: white !important;
 }
 
 .logFacebook {
-	margin-left: 120px !important;
-    margin-top: -65px !important;
+	margin-left: 331px !important;
+    margin-top: -134px !important;
     background-color: #0d47a1 !important;
     font-size: 1.2em !important;
     color: white !important;
@@ -130,13 +134,18 @@ span{
 
 .enterInfo {
 	width: 50%;
-	margin-left: 355px;
+	margin-left: 325px;
 	margin-top: 100px;
 }
 
 .row .col.s12 {
     width: 95%;
-    margin-left: 20px;
+    margin-left: 70px;
+}
+
+.pickState {
+    width: 95%;
+    margin-left: -40px !important;
 }
 .row .col.s6 {
     width: 80%;
@@ -177,3 +186,21 @@ select {
 	text-align: right;
 	margin: 5px;
 }
+
+button.btn.btn-default.btn-lg.logInButton {
+	margin: 20px 0;
+	font-size: 1.2em !important;
+	background-color: #eee;
+	height: 42px !important;
+	border-radius: 7px !important;
+}
+
+.loginForm {
+	margin: 0;
+}
+
+.success {
+	text-align: left;
+	margin: 10px;
+}
+

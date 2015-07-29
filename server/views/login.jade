@@ -2,14 +2,17 @@ h2
 	span Login page
 
 div(ng-controller="LoginController")
-		form.logIn(action="/login", method="post", novalidate) 
+	.row.enterInfo
+		form.col.s12(action="/login", method="post", novalidate) 
 				div.form-group
-						label Username
+					.input-field.col.s6
+						label.loginForm Username
 						input.form-control(type="text", name="username", required, data-required-msg='Username is required')
 				div.form-group
-						label Password
+					.input-field.col.s6
+						label.loginForm Password
 						input.form-control(type="password", name="password", required)
-				button.btn.btn-default.btn-lg(type="submit") Log in
+						button.btn.btn-default.btn-lg.logInButton(type="submit") Log in
 		a(href="/auth/google/" target="_self")
 			div 
 				.ui.animated.button.logGoogle(tabindex='0')
@@ -32,35 +35,3 @@ div(ng-controller="LoginController")
 	//- 					.hidden.content
 	//- 						i.right.arrow.icon
 
-
-
-//- 	h2
-//- 	span Login page
-
-//- div(ng-controller="LoginController")
-//- .row.enterInfo
-//- 	form.col.s12(name="anyName",action="/login", method="post")
-//- 		.row
-//- 			.input-field.col.s6
-//- 				input#username.validate(placeholder='Your Username Name', type='text', required)
-//- 				label(for='username') Username
-//- 		.row
-//- 			.input-field.col.s6
-//- 				input#password.validate(placeholder='Your Password', type='text', required)
-//- 				label(for='password') Password
-//- 				//- button.btn.waves-effect.waves-light(type="submit", ng-disabled="anyName.$invalid") Submit
-				
-
-//- 		a(href="/auth/google/" target="_self")
-//- 			div 
-//- 				.ui.animated.button.logGoogle(tabindex='0')
-//- 					.visible.content Google
-//- 					.hidden.content
-//- 						i.right.arrow.icon
-
-//- 		a(href="/auth/facebook/" target="_self")
-//- 			div 
-//- 				.ui.animated.button.logFacebook(tabindex='0')
-//- 					.visible.content Facebook
-//- 					.hidden.content
-//- 						i.right.arrow.icon

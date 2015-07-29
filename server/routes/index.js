@@ -3,24 +3,29 @@
   Dependencies
   ********************************/
 var fs = require('fs');
-var path = __dirname + '/file.jsON'
-var path2 = __dirname + '/cities.json';
+var path = __dirname + '/../helpFiles/file.json'
+var path2 = __dirname + '/../helpFiles/cities.json';
 
 
  /*******************************
   Export function
   ********************************/
-module.exports = function(app, passport) {
+module.exports = function (app, passport) {
  
-  /*******************************
+
+   /*******************************
+ Retrieve pages ste2,step3 and so on
+  ********************************/
+  app.get('/page/signup/:id', function (req, res) {
+    
+    res.render(req.params.id)
+  });
+
+
+
+   /*******************************
   Rendering pages
   ********************************/
-
- 
-  app.get('/page/signup/:id', function (req, res) {
-    console.log("IN SIGNUP")
-    res.render(req.params.id)
-  })
 
 	app.get('/page/:id', function (req, res) {
 		  if (req.user) {
@@ -32,12 +37,9 @@ module.exports = function(app, passport) {
 		  else {
         	res.render('login');
       }
-
-        // res.render(req.params.id);
   });
 
  
-
 
 	 /*******************************
   Get user to the client side
@@ -46,22 +48,27 @@ module.exports = function(app, passport) {
  	    res.json(req.user)
  	});
 
-  app.get('/cities/:st', function (req, res){
-    console.log("REQPARAMS", req.params.st)
-    fs.readFile(path2, function(err, data){
+   /**************************************************
+  Retrieve all cities that belong to the selected state
+  ***************************************************/
+  app.get('/cities/:st', function (req, res) {
+   
+    fs.readFile(path2, function (err, data) {
       if(err) throw err;
       var cities = JSON.parse(data);
-      console.log("CITIES", cities)
       res.send(cities[req.params.st].cities)
     })
   });
 
-  app.get('/states/', function(req, res){
-    console.log("IN STATES")
-    fs.readFile(path2, function(err, data){
-      if(err) throw err;
+
+   /*******************************
+  Retrieve all states
+  ********************************/
+  app.get('/states/', function (req, res) {
+ 
+    fs.readFile(path2, function (err, data) {
+      if (err) throw err;
       var states = JSON.parse(data);
-      console.log("CITIES", states)
       res.send(states)
     })
   })

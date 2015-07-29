@@ -6,7 +6,7 @@ var LocalStrategy   = require('passport-local').Strategy;
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var FacebookStrategy = require('passport-facebook').Strategy
 
-var User = require('../fakeDB.js');
+var User = require('../helpFiles/fakeDB.js');
 var ThirdPartyAuth = require('./auth.js');
 
 

@@ -16,7 +16,7 @@ angular.module('ngMyApp')
 						$location.url('/notAllowed');
 					}
 					else {
-						$location.url("/login");
+						$location.url("/success");
 					}
 				})
 	}

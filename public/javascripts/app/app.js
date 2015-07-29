@@ -51,6 +51,10 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 				templateUrl: '/page/signup/notAllowed',
 				controller: 'NotAllowedController'
 			}).
+			when('/success', {
+				templateUrl: '/page/signup/success',
+				controller: 'SuccessController'
+			}).
 			otherwise({
 				redirectTo: '/'
 			}),
