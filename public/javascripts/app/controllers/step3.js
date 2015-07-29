@@ -11,7 +11,7 @@ angular.module('ngMyApp')
 				$scope.states = states;
 			})
 
-		$scope.showNextPage = function () {
+		$scope.getCitiesByState = function () {
 
 			Users.createUser($rootScope.objectToSend)
 				.then(function(data){

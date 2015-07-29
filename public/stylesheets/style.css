@@ -1,3 +1,5 @@
+/*headers*/
+
 h1,h2 {
 	text-align: center !important;
 }
@@ -65,6 +67,7 @@ p#aboutPage {
 	color: white;
 }
 
+/*layouts*/
 body {
 	background-image: url("https://download.unsplash.com/photo-1414073875831-b47709631146");
 	background-size: cover;
@@ -101,11 +104,14 @@ body {
 .success-layout {
 	background-image: url("https://ununsplash.imgix.net/photo-1433208406127-d9e1a0a1f1aa?dpr=2&fit=crop&fm=jpg&h=800&q=75&w=1050");
 }
+
+
 span{
 	margin: 40px 0 !important;
 	font-size: 1em;
 }
 
+/*LogIn buttons*/
 .logIn {
 	width: 75%;
 	margin-left: 255px;
@@ -127,10 +133,10 @@ span{
     color: white !important;
 }
 
-.logLocal {
+/*.logLocal {
 	font-size: 1.2em !important;
 
-}
+}*/
 
 .enterInfo {
 	width: 50%;
@@ -210,6 +216,6 @@ input[type=email]+label:after{
      margin-left: 313px;
    }
 
-   label.email.active {
+label.email.active {
    	margin: 0 !important;
    }

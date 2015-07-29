@@ -6,11 +6,9 @@ div(ng-controller="Step3Controller")
 			.input-field.col.s12.pickState
 				p Pick your state!
 					i.fa.fa-home.fa-lg
-				select.browser-default(ng-model="objectToSend.state")
+				select.browser-default(ng-model="objectToSend.state", ng-change='getCitiesByState()')
 					option(value='', disabled, selected) Choose your State
 					option(ng-selected="objectToSend.state == state" ng-repeat="state in states", value = '{{state.code}}') {{state.code}} - {{state.label}}
-				button.btn.waves-effect.waves-light.states(type="submit", name="action", ng-disabled="anyName.$invalid", ng-click="showNextPage()") Next
-
 		.row(ng-if="showForm")
 			.input-field.col.s12.pickState
 				select.browser-default(ng-model="objectToSend.city")

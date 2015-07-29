@@ -1,6 +1,6 @@
 var app = angular.module('ngMyApp', ['ngRoute']);
 
-	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+	app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 		$routeProvider.
 			when('/', {
 				templateUrl: '/page/home',
@@ -24,15 +24,15 @@ var app = angular.module('ngMyApp', ['ngRoute']);
 			}).
 			when('/signup', {
 				templateUrl: '/page/signup',
-				resolve: {
-					ustates: ['States', function(States){
-				 		return States.getStates()
-				 			.then(function(states){
-				 				console.log("RESOLVE", states)
-				 				return states
-				 			})
-				 	}]
-				 },
+				// resolve: {
+				// 	ustates: ['States', function(States){
+				//  		return States.getStates()
+				//  			.then(function(states){
+				//  				console.log("RESOLVE", states)
+				//  				return states
+				//  			})
+				//  	}]
+				//  },
 				controller: 'SignupController'
 			}).
 			when('/step2', {
