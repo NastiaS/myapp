@@ -5,8 +5,8 @@ div(ng-controller="Step2Controller")
 		.row
 			.input-field.col.s6
 				input#email.validate(placeholder='Your Email', type='email', required, ng-model="objectToSend.email")
-				i.fa.fa-envelope-o.fa-lg
-				label(for='email',data-error="Incorrect Email", data-success="right") Email
+				//- i.fa.fa-envelope-o.fa-lg
+				label.email(for='email',data-error="Invalid Email") Email
 		.row
 			.input-field.col.s6
 				input#password.validate(placeholder='Your Password', type='password', required, ng-model="objectToSend.password")
