@@ -210,12 +210,61 @@ button.btn.btn-default.btn-lg.logInButton {
 	margin: 10px;
 }
 
-input[type=email]+label:after{
+label:after{
      position: relative;
-     margin-top: -31px;
      margin-left: 313px;
    }
 
 label.email.active {
    	margin: 0 !important;
    }
+button.btn.waves-effect.waves-light.log {
+	float: none;
+}
+button.btn.waves-effect.waves-light.log.google {
+	float: none;
+	margin-top: -56px;
+	margin-left: 213px;
+}
+
+button.btn.waves-effect.waves-light.log.facebook {
+	float: none;
+	margin-top: -91px;
+	margin-left: 342px;
+}
+table { 
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 80%; 
+border-collapse: collapse; 
+border-spacing: 0; 
+}
+
+td, th { 
+border: 1px solid transparent;
+height: 30px;
+transition: all 0.3s;
+}
+
+th {
+background: #DFDFDF;  /* Darken header a bit */
+font-weight: bold;
+text-align: center;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* One color for even rows */ 
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* anothe for the odd ones  */ 
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+/* Cells change color on the hover */
+tr td:hover { background: #4db6ac; color: #FFF; } 
+
+
+

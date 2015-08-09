@@ -6,6 +6,14 @@ angular.module('ngMyApp')
 					$scope.user = user;
 					$rootScope.currentUser = user;
 				})
+
+
+//users page is available only through the home page. Attach all users to the rootscope so 
+//it is available to the table directive
+			Users.bringUsers()
+				.then(function (allUsers) {	 	
+					$rootScope.users = allUsers;
+			});	
 	}]);
 
 

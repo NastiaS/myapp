@@ -55,7 +55,19 @@ app.factory('Users', ['$http', 'APIConfig', function ($http, APIConfig) {
 		bringUsers: function () {
 		    return $http.get(APIConfig.getRoot() + "users/")
 		    	.then(function (users) {
-		    		return users.data
+					var usersObj = [];
+		    		users.data.forEach(function (e) {
+		    			usersObj.push({
+		    				name: e.name, 
+		    				username: e.username, 
+		    				phone: e.phone, 
+		    				email: e.email, 
+		    				website: e.website, 
+		    				address: e.address.city, 
+		    				company: e.company.name
+		    			})
+		    		})
+		    		return usersObj;
 		    	})
     		},
     	bringAuthUser: function(){

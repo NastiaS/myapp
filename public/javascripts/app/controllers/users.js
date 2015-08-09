@@ -1,21 +1,9 @@
 angular.module('ngMyApp')
-
 	.controller('UsersController', ['$scope', '$rootScope', 'Users', 'Albums', function ($scope, $rootScope,Users, Albums) {
 		
 		//change the glodab variable that changes the class of the body for the bk_image
 		$rootScope.bodylayout = 'users-layout';
 		$scope.show_users = false;
-
-		//display all users
-		$scope.loadUsers = function () {
-
-			$scope.show_users = true;
-
-			Users.bringUsers()
-				.then(function (allUsers) {	 	
-					$scope.users = allUsers;
-			});			
-		};
 
 		//hide all users 
 		$scope.hideUsers = function () {
@@ -57,3 +45,14 @@ angular.module('ngMyApp')
 
 
 }]);
+// angular.module('ngMyApp')
+
+// .directive('nastia', function ()  {
+
+//     return {
+    	
+//     	//okay html for the headers but not for the body
+//         template: '<tr><td ng-bind="$index + 1"></td><td><strong ng-bind="user.name"></strong></td><td ng-bind="user.email"></td>td ng-bind="user.website"></td></tr>'
+//     };
+// });
+

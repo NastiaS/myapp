@@ -12,20 +12,22 @@ div(ng-controller="LoginController")
 					.input-field.col.s6
 						label.loginForm Password
 						input.form-control(type="password", name="password", required)
-						button.btn.btn-default.btn-lg.logInButton(type="submit") Log in
+						button.btn.waves-effect.waves-light.log(type="submit") Log in
 		a(href="/auth/google/" target="_self")
-			div 
-				.ui.animated.button.logGoogle(tabindex='0')
-					.visible.content Google
-					.hidden.content
-						i.right.arrow.icon
+			button.btn.waves-effect.waves-light.log.google Google
+			//- div 
+			//- 	.ui.animated.button.logGoogle(tabindex='0')
+			//- 		.visible.content Google
+			//- 		.hidden.content
+			//- 			i.right.arrow.icon
 
 		a(href="/auth/facebook/" target="_self")
-			div 
-				.ui.animated.button.logFacebook(tabindex='0')
-					.visible.content Facebook
-					.hidden.content
-						i.right.arrow.icon
+			button.btn.waves-effect.waves-light.log.facebook Facebook
+			//- div 
+			//- 	.ui.animated.button.logFacebook(tabindex='0')
+			//- 		.visible.content Facebook
+			//- 		.hidden.content
+			//- 			i.right.arrow.icon
 
 
 
